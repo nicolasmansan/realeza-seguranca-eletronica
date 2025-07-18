@@ -1,8 +1,37 @@
-<header class="container">
+<header>
   <div class="pre-header">
-    contaot
+    <div class="container content">
+      <a href="tel:+555130120735">(51) 3012-0735</a>
+      <a href="https://maps.app.goo.gl/Pnh8fCfCbwvm5r2C7" target="_blank">Rua Fernando Cortez, 239 Cristo Redentor – Porto Alegre – RS</a>
+    </div>
   </div>
-  <div>
-
+  <div class="container logo-menu">
+    <div class="image-container">
+      <img src="/images/logo.webp" alt="Realeaza">
+    </div>
+    <nav [classList]="isMobileMenuOpen ? 'menu open': 'menu'">
+      <ul>
+        <li>
+          <a href="/">Início</a>
+        </li>
+        <li>
+          <a href="/servicos">Serviços</a>
+        </li>
+        <li>
+          <a href="/produtos">Produtos</a>
+        </li>
+        <li>
+          <a href="/historia">Nossa História</a>
+        </li>
+        <li>
+          <a href="/contato">Contato</a>
+        </li>
+      </ul>
+    </nav>
+    <app-menu-button
+      class="mobile-button"
+      [color]="'#333'" 
+      (menuToggle)="togglemenu($event)">
+    </app-menu-button>
   </div>    
 </header>
