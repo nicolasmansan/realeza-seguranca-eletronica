@@ -1,20 +1,50 @@
+@use '../../vars.scss' as *;
+
 .banner-background {
   background-image: url('/images/background.png');
   background-position: bottom;
   background-size: cover;
-  height: 400px;
+  height: 650px;
 }
+
 .content {
   height: 100%;
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
   justify-content: center;
-  color: #fff;
+  color: $primary-text;
 
-  h1 {
-    font-size: 2rem;
+  .half {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    justify-content: center;
   }
+
+  @media (min-width: 768px) {
+    .half {
+      width: 80%;
+    }
+  }
+
+  @media (min-width: 998px) {
+    .half {
+      width: 60%;
+    }
+  }
+
+
+  h2 {
+    font-size: 3.175rem;
+  }
+
+  strong {
+    color: $primary;
+  }
+
   p {
-    margin: 1rem 0;
+    font-size: 1.175rem;
   }
 }

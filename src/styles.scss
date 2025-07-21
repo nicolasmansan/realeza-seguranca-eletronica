@@ -1,5 +1,6 @@
-//@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@use './vars.scss' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   margin: 0;
@@ -8,11 +9,12 @@
 }
 
 body {
-  font-family: "Oswald", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
+  font-size: 16px;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings: "wdth" 100;
+  line-height: 1.6rem;
 }
 
 a {
@@ -21,9 +23,18 @@ a {
 
 .container {
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 1080px;
 }
-@media screen and (max-width: 902px) {
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+
+@media screen and (max-width: 1079.999px) {
  .container {
     margin: 0 0.5rem;
   } 
@@ -31,8 +42,10 @@ a {
 
 button, .btn-primary {
   padding: 1rem;
-  font-weight: 500;
-  border-radius: 3px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 5px;
   border: none;
   box-shadow: none;
 
@@ -42,6 +55,69 @@ button, .btn-primary {
 }
 
 .btn-primary {
-  color: #f3f3f3;
-  background-color: #15a20e;
+  color: $primary-text;
+  background-color: $primary;
+  transition: 100ms;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+
+  &:active {
+    background-color: $primary-active;
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-up.delay-1 {
+  animation-delay: 0.3s;
+}
+
+.fade-in-up.delay-2 {
+  animation-delay: 0.6s;
+}
+
+.fade-in-up.delay-3 {
+  animation-delay: 0.9s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(20px);
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.fade-in-left.delay-1 {
+  animation-delay: 0.2s;
+}
+
+.fade-in-left.delay-2 {
+  animation-delay: 0.4s;
+}
+
+.fade-in-left.delay-3 {
+  animation-delay: 0.6s;
+}
+
+.fade-in-left.delay-4 {
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
