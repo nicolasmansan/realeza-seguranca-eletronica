@@ -9,7 +9,11 @@
       @for (review of reviews; track review) {
         <div class="review-card">
           <b>{{ review.name }}</b>
-          <p class="condo">{{ review.condo }}</p>
+          <p class="condo">
+            <span aria-hidden="true">
+              <span class="stars" style="background:linear-gradient(to right, currentcolor 70px, #808b84 0%)"></span>
+            </span>
+            {{ review.date }}</p>
           <p class="text">“{{ review.text }}”</p>
         </div>
       }

@@ -45,6 +45,8 @@
       font-size: 0.95rem;
       color: #777;
       margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
     }
 
     .text {
@@ -74,7 +76,7 @@
 
   @media (min-width: 768px) {
     .review-card {
-      flex: 0 0 48%;
+      flex: 0 0 32%;
     }
 
     .nav.left {
