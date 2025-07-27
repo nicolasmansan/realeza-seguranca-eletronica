@@ -8,12 +8,12 @@
     <img class="nav left" (click)="scroll('left')" src="/icons/circle-chevron-left.svg" alt="Anterior">
 
     <div class="carousel-track-services">
-      @for (service of services; track service.title) {
-        <div class="carousel-item" (click)="navigate(service.link)">
-          <div class="bg" [style.backgroundImage]="'url(' + service.image + ')'"></div>
+      @for (solution of solutions; track solution.title) {
+        <div class="carousel-item">
+          <div class="bg" [style.backgroundImage]="'url(' + solution.image + ')'"></div>
           <div class="overlay">
-            <h4>{{ service.title }}</h4>
-            <p>{{ service.description }}</p>
+            <h4>{{ solution.title }}</h4>
+            <p>{{ solution.description }}</p>
           </div>
         </div>
       }

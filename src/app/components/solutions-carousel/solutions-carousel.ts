@@ -1,22 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Service, servicesData } from '../../repositories/services';
+import { Solution, solutionsData } from '../../repositories/solutions';
 
 
 @Component({
-  selector: 'app-services-carousel',
+  selector: 'app-solutions-carousel',
   imports: [],
-  templateUrl: './services-carousel.html',
-  styleUrl: './services-carousel.scss'
+  templateUrl: './solutions-carousel.html',
+  styleUrl: './solutions-carousel.scss'
 })
-export class ServicesCarousel implements OnInit {
+export class SolutionsCarousel implements OnInit {
   
-  public services: Service[];
+  public solutions: Solution[];
 
   scrollInterval: any;
 
-  constructor(private router: Router) {
-    this.services = servicesData;
+  constructor() {
+    this.solutions = solutionsData;
   }
 
   ngOnInit() {
@@ -34,10 +33,6 @@ export class ServicesCarousel implements OnInit {
         }
       }, 10000);
     }
-  }
-
-  navigate(link: string) {
-    this.router.navigate(['servicos'])
   }
 
   scroll(direction: 'left' | 'right') {
