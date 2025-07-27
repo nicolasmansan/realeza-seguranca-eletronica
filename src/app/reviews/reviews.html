@@ -1,0 +1,19 @@
+<div class="carousel-wrapper">
+  <div class="container">
+    <h3 class="home-subtitle">O que dizem sobre a Realeza</h3>
+  </div>
+
+  <div class="carousel-container container">
+    <img class="nav left" (click)="scroll('left')" src="/icons/circle-chevron-left.svg" alt="Anterior">
+    <div class="carousel" #carousel>
+      @for (review of reviews; track review) {
+        <div class="review-card">
+          <b>{{ review.name }}</b>
+          <p class="condo">{{ review.condo }}</p>
+          <p class="text">“{{ review.text }}”</p>
+        </div>
+      }
+    </div>
+    <img class="nav right" (click)="scroll('right')" src="/icons/circle-chevron-right.svg" alt="Próximo">
+  </div>
+</div>
