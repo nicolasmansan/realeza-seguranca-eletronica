@@ -1,0 +1,18 @@
+<section class="brands-section container">
+  <h3>Marcas que trabalhamos</h3>
+  <hr>
+  <div class="carousel-wrapper">
+    <div class="carousel-track">
+      @for (item of brands; track item.name) {
+        <div class="brand-item">
+          <img [src]="item.url" [alt]="item.name" loading="lazy" />
+        </div>
+      }
+      @for (item of brands; track item.name) {
+        <div class="brand-item">
+          <img [src]="item.url" [alt]="item.name" loading="lazy" />
+        </div>
+      }
+    </div>
+  </div>
+</section>
