@@ -1,5 +1,27 @@
 # Realeza
 
+TODO: 
+Componentes na pagina inicial
+    Sobre nos
+    Contato + Mapa
+    Serviços => Imititar leayout com 3 pilares
+    Planos
+    Redes Sociais => Carrossel do instagram?
+
+Nossa historia => TimeLine com fotos e anos intercalados
+
+Páginas de serviços => A principio somente 3 com os 3 pilares que a realeza trabalha
+
+Página de contato => Renderizar componente de contato + Mapa
+
+Mais botões de ação com link para whatsapp
+
+Botão de whatsapp
+
+Colocar sub páginas abaixo dos serviços no menu
+
+Footer com copyright
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
 
 ## Development server

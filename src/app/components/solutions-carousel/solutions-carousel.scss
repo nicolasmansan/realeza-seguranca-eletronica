@@ -1,5 +1,6 @@
 .carousel-container {
   text-align: center;
+  margin-top: 2rem;
 
   .subtitle {
     font-size: 1.2rem;
@@ -52,12 +53,18 @@
         color: white;
         width: 100%;
         transition: 200ms;
-        height: 50px;
+        height: 65px;
         padding: 16px;
 
         h4 {
           margin: 0 0 8px 0;
           font-size: 1.1rem;
+        }
+
+        .arrow-down {
+          width: 20px;
+          filter: brightness(0) invert(1);
+          animation: floatArrow 2s ease-in-out infinite;
         }
 
         p {
@@ -66,11 +73,17 @@
         }
       }
 
-      &:hover .overlay {  
-        height: 100%;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
+      &:hover {
+        .overlay {
+          height: 100%;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .arrow-down {
+          display: none;
+        }
       }
     }
 
@@ -110,7 +123,7 @@
     flex: 0 0 50% !important;
 
     .overlay {
-      height: 45px !important;
+      height: 60px !important;
     }
 
     &:hover .overlay {  
@@ -131,5 +144,17 @@
 @media (max-width: 576px) {
   .carousel-item {
     flex: 0 0 100% !important;
+  }
+}
+
+@keyframes floatArrow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
