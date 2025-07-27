@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:realeza": "node dist/realeza/server/server.mjs"
+    "serve:ssr:realeza": "node dist/realeza/server/server.mjs",
+    "deploy:gh": "ng build --configuration production --base-href /realeza-seguranca-eletronica/ && cp -r dist/realeza/browser/* docs/"
   },
   "prettier": {
     "overrides": [
