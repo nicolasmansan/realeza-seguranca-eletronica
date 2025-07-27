@@ -1,12 +1,5 @@
 .carousel-container {
   text-align: center;
-  padding: 40px 20px;
-
-  .title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
 
   .subtitle {
     font-size: 1.2rem;
@@ -18,7 +11,7 @@
     position: relative;
     overflow: hidden;
 
-    .carousel-track {
+    .carousel-track-services {
       display: flex;
       transition: transform 0.5s ease;
     }
@@ -27,14 +20,9 @@
       flex: 0 0 25%;
       cursor: pointer;
       position: relative;
-      height: 300px;
+      height: 350px;
       transition: transform 0.3s;
-      border-radius: 10px;
       overflow: hidden;
-
-      &:hover {
-        transform: scale(1.02);
-      }
 
       .bg {
         background-size: cover;
@@ -46,12 +34,18 @@
       .overlay {
         position: absolute;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.55);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        background: rgba(0, 0, 0, 0.70);
         color: white;
         width: 100%;
+        transition: 200ms;
+        height: 50px;
         padding: 16px;
 
-        h3 {
+        h4 {
           margin: 0 0 8px 0;
           font-size: 1.1rem;
         }
@@ -61,20 +55,23 @@
           font-size: 0.9rem;
         }
       }
+
+      &:hover .overlay {  
+        height: 100%;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
     }
 
-    .nav-button {
+    .nav {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       z-index: 10;
-      background: rgba(0, 0, 0, 0.5);
       border: none;
-      color: white;
-      font-size: 2rem;
+      width: 50px;
       cursor: pointer;
-      padding: 0 10px;
-      border-radius: 50%;
 
       &.left {
         left: 10px;
@@ -101,6 +98,17 @@
 @media (max-width: 768px) {
   .carousel-item {
     flex: 0 0 50% !important;
+
+    .overlay {
+      height: 45px !important;
+    }
+
+    &:hover .overlay {  
+      height: 100% !important;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 }
 @media (max-width: 576px) {

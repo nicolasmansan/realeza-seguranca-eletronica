@@ -26,13 +26,13 @@ export class ServicesCarousel implements OnInit {
   startAutoScroll() {
     if (typeof window !== 'undefined') {
       this.scrollInterval = setInterval(() => {
-        const container = document.querySelector('.carousel-track') as HTMLElement;
+        const container = document.querySelector('.carousel-track-services') as HTMLElement;
         if (container) {
           const firstItem = container.children[0] as HTMLElement;
           container.appendChild(firstItem.cloneNode(true));
           container.removeChild(firstItem);
         }
-      }, 4000);
+      }, 10000);
     }
   }
 
@@ -41,7 +41,7 @@ export class ServicesCarousel implements OnInit {
   }
 
   scroll(direction: 'left' | 'right') {
-    const container = document.querySelector('.carousel-track') as HTMLElement;
+    const container = document.querySelector('.carousel-track-services') as HTMLElement;
     if (!container) return;
 
     if (direction === 'left') {

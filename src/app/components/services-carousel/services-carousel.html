@@ -1,24 +1,24 @@
 <div class="carousel-container">
-  <h2 class="title">Nossos Serviços</h2>
+  <h3 class="title">Soluções</h3>
   <p class="subtitle">
-    Oferecemos uma gama completa de soluções de automação residencial, AV e TI para clientes residenciais e comerciais.
+    Oferecemos uma gama completa de soluções de para segurança e comunicação, residenciais e comerciais.
   </p>
 
   <div class="carousel-wrapper">
-    <button class="nav-button left" (click)="scroll('left')">&#10094;</button>
+    <img class="nav left" (click)="scroll('left')" src="/icons/circle-chevron-left.svg" alt="Anterior">
 
-    <div class="carousel-track">
+    <div class="carousel-track-services">
       @for (service of services; track service.title) {
         <div class="carousel-item" (click)="navigate(service.link)">
           <div class="bg" [style.backgroundImage]="'url(' + service.image + ')'"></div>
           <div class="overlay">
-            <h3>{{ service.title }}</h3>
+            <h4>{{ service.title }}</h4>
             <p>{{ service.description }}</p>
           </div>
         </div>
       }
     </div>
 
-    <button class="nav-button right" (click)="scroll('right')">&#10095;</button>
+    <img class="nav right" (click)="scroll('right')" src="/icons/circle-chevron-right.svg" alt="Próximo">
   </div>
 </div>
