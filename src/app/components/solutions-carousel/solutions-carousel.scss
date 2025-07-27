@@ -8,12 +8,22 @@
   }
 
   .carousel-wrapper {
+    width: 100%;
+    
     position: relative;
-    overflow: hidden;
-
-    .carousel-track-services {
+    
+    .carousel {
       display: flex;
-      transition: transform 0.5s ease;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
 
     .carousel-item {
@@ -109,6 +119,13 @@
       flex-direction: column;
       justify-content: center;
     }
+  }
+  .nav.left {
+    display: none;
+  }
+
+  .nav.right {
+    display: none;
   }
 }
 @media (max-width: 576px) {

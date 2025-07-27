@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Solution, solutionsData } from '../../repositories/solutions';
 
 
@@ -8,45 +8,53 @@ import { Solution, solutionsData } from '../../repositories/solutions';
   templateUrl: './solutions-carousel.html',
   styleUrl: './solutions-carousel.scss'
 })
-export class SolutionsCarousel implements OnInit {
+export class SolutionsCarousel implements AfterViewInit {
   
-  public solutions: Solution[];
+  @ViewChild('carousel', { static: false }) carouselRef!: ElementRef<HTMLDivElement>;
 
-  scrollInterval: any;
+  public intervalId: any = null;
+
+  public solutions: Solution[];
 
   constructor() {
     this.solutions = solutionsData;
   }
 
-  ngOnInit() {
-    this.startAutoScroll();
-  }
-
-  startAutoScroll() {
+  ngAfterViewInit(): void {
     if (typeof window !== 'undefined') {
-      this.scrollInterval = setInterval(() => {
-        const container = document.querySelector('.carousel-track-services') as HTMLElement;
-        if (container) {
-          const firstItem = container.children[0] as HTMLElement;
-          container.appendChild(firstItem.cloneNode(true));
-          container.removeChild(firstItem);
+      this.intervalId = setInterval(() => {
+        const carousel = this.carouselRef.nativeElement;
+        const el = carousel;
+        const maxScroll = el.scrollWidth - el.clientWidth;
+
+        if (Math.round(el.scrollLeft) >= maxScroll) {
+          el.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+           const card = carousel.querySelector('.carousel-item') as HTMLElement;
+          const offset = card?.offsetWidth || 320;
+    
+          el.scrollBy({ left: offset, behavior: 'smooth' });
         }
       }, 10000);
     }
   }
 
-  scroll(direction: 'left' | 'right') {
-    const container = document.querySelector('.carousel-track-services') as HTMLElement;
-    if (!container) return;
+  ngOnDestroy() {
+    clearInterval(this.intervalId);
+  }
 
-    if (direction === 'left') {
-      const lastItem = container.lastElementChild as HTMLElement;
-      container.insertBefore(lastItem.cloneNode(true), container.firstChild);
-      container.removeChild(lastItem);
-    } else {
-      const firstItem = container.firstElementChild as HTMLElement;
-      container.appendChild(firstItem.cloneNode(true));
-      container.removeChild(firstItem);
+  scroll(direction: 'left' | 'right') {
+    const carousel = this.carouselRef?.nativeElement;
+    if (!carousel) return;
+
+    const card = carousel.querySelector('.carousel-item') as HTMLElement;
+    const offset = card?.offsetWidth || 320;
+
+    if (typeof carousel.scrollBy === 'function') {
+      carousel.scrollBy({
+        left: direction === 'right' ? offset : -offset,
+        behavior: 'smooth'
+      });
     }
   }
 }

@@ -4,6 +4,7 @@
   background: #f9f9f9;
   border-radius: 1rem;
   text-align: center;
+  overflow-x: hidden;
 
   .carousel-container {
     position: relative;
@@ -27,7 +28,7 @@
     }
   }
   .review-card {
-    flex: 0 0 100%;
+    flex: 0 0 90%;
     scroll-snap-align: start;
     background: white;
     padding: 1.5rem;

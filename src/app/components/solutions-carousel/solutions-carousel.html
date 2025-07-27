@@ -7,7 +7,7 @@
   <div class="carousel-wrapper">
     <img class="nav left" (click)="scroll('left')" src="/icons/circle-chevron-left.svg" alt="Anterior">
 
-    <div class="carousel-track-services">
+    <div class="carousel" #carousel>
       @for (solution of solutions; track solution.title) {
         <div class="carousel-item">
           <div class="bg" [style.backgroundImage]="'url(' + solution.image + ')'"></div>
