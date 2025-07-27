@@ -1,0 +1,24 @@
+<div class="carousel-container">
+  <h2 class="title">Nossos Serviços</h2>
+  <p class="subtitle">
+    Oferecemos uma gama completa de soluções de automação residencial, AV e TI para clientes residenciais e comerciais.
+  </p>
+
+  <div class="carousel-wrapper">
+    <button class="nav-button left" (click)="scroll('left')">&#10094;</button>
+
+    <div class="carousel-track">
+      @for (service of services; track service.title) {
+        <div class="carousel-item" (click)="navigate(service.link)">
+          <div class="bg" [style.backgroundImage]="'url(' + service.image + ')'"></div>
+          <div class="overlay">
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+
+    <button class="nav-button right" (click)="scroll('right')">&#10095;</button>
+  </div>
+</div>
