@@ -17,11 +17,7 @@
     </ul>
 
     <h2>Galeria de serviços realizados:</h2>
-    <div class="gallery">
-      @for (img of galleryImages; track img) {
-        <img [src]="img" alt="Serviço de segurança eletrônica realizado" />
-      }
-    </div>
+    <app-gallery [images]="galleryImages"></app-gallery>
 
     <h2>Nossos diferenciais:</h2>
     <ul class="differentials-list">

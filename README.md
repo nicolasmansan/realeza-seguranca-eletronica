@@ -2,7 +2,6 @@
 
 TODO: 
 Componentes na pagina inicial
-    Sobre nos
     Planos
 
 Nossa historia => TimeLine com fotos e anos intercalados
@@ -23,8 +22,3 @@ https://www.moverautomatizacao.com.br/
 
 Verificar situação do site
 https://registro.br/tecnologia/ferramentas/whois?search=rparealeza.com.br
-
-
-Qualidade
-
-## Definir componente para subtitulos

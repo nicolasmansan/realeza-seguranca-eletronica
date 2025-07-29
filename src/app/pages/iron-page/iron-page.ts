@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Gallery } from "../../components/gallery/gallery";
 
 @Component({
   selector: 'app-iron-page',
-  imports: [],
+  imports: [Gallery],
   templateUrl: './iron-page.html',
   styleUrl: './iron-page.scss'
 })
@@ -16,9 +17,9 @@ export class IronPage {
   ];
 
   galleryImages = [
-    'assets/serralheria/servico1.jpg',
-    'assets/serralheria/servico2.jpg',
-    'assets/serralheria/servico3.jpg'
-    // Adicione mais caminhos conforme necessário
+    { src: '/images/serralheria/serra1.webp', title: 'Reparo em serralheria', description: 'Reparo em portão danificado' },
+    { src: '/images/serralheria/serra2.webp', title: 'Reparo em serralheria', description: 'Reparo em portão danificado' },
+    { src: '/images/serralheria/serra3.webp', title: 'Reparo em serralheria', description: 'Reparo em portão danificado' },
+    { src: '/images/serralheria/serra4.webp', title: 'Reparo em serralheria', description: 'Reparo em portão danificado' }
   ];
 }

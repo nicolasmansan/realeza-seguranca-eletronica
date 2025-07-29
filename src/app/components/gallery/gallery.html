@@ -1,0 +1,14 @@
+<section class="container">
+  <div class="gallery-grid">
+    @for (image of images; track image) {
+      <a 
+        class="glightbox" 
+        [attr.href]="image.src"
+        [attr.data-title]="image.title" 
+        [attr.data-description]="image.description"
+      >
+        <img [src]="image.src" [alt]="image.title" loading="lazy" />
+      </a>
+    }  
+  </div>
+</section>
