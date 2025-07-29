@@ -6,7 +6,7 @@ import { GatePage } from './pages/gate-page/gate-page';
 
 export const routes: Routes = [
   { path: '', component: HomePage },
-  { path: 'serralheiria', component: IronPage },
+  { path: 'serralheria', component: IronPage },
   { path: 'seguranca-eletronica', component: SecurityPage },
-  { path: 'portoes-eletronicos', component: GatePage },
+  { path: 'portoes-automaticos', component: GatePage },
 ];

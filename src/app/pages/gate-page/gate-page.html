@@ -1,1 +1,31 @@
-<p>gate-page works!</p>
+<section class="portoes-page">
+  <div class="header">
+    <h1>Portões Automáticos</h1>
+    <img src="assets/portoes-automaticos/banner.jpg" alt="Imagem de portão automático" />
+  </div>
+
+  <div class="content">
+    <p class="intro">
+      Automatize seu portão com segurança, praticidade e tecnologia. Instalamos e realizamos manutenção de motores para todos os tipos de portões, com soluções sob medida para cada espaço.
+    </p>
+
+    <h2>Serviços oferecidos:</h2>
+    <ul class="services-list">
+      @for (item of services; track item) {
+        <li><i class="fas fa-cogs"></i> {{ item }}</li>
+      }
+    </ul>
+
+    <h2>Galeria de serviços realizados:</h2>
+    <div class="gallery">
+      @for (img of galleryImages; track img) {
+        <img [src]="img" alt="Portão automático instalado ou reparado" />
+      }
+    </div>
+
+    <div class="cta">
+      <h3>Quer automatizar seu portão com qualidade?</h3>
+      <a routerLink="/contato" class="button">Solicite um orçamento</a>
+    </div>
+  </div>
+</section>

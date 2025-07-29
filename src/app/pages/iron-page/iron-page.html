@@ -1,1 +1,33 @@
-<p>iron-page works!</p>
+<section class="serralheria-page">
+  <div class="header">
+    <h1>Serralheria Especializada</h1>
+    <img src="assets/serralheria/banner.jpg" alt="Imagem de serralheria em ação" />
+  </div>
+
+  <div class="content">
+    <p class="intro">
+      Atuamos com serviços de serralheria focados em pequenas adaptações e manutenções para garantir
+      que seu portão esteja pronto para receber a automação. Nosso objetivo é preparar estruturas existentes
+      de forma segura, eficiente e com acabamento profissional.
+    </p>
+
+    <h2>O que oferecemos:</h2>
+    <ul class="services-list">
+      @for (item of services; track item) {
+        <li><i class="fas fa-wrench"></i> {{ item }}</li>
+      }
+    </ul>
+
+    <h2>Galeria de serviços realizados:</h2>
+    <div class="gallery">
+      @for (img of galleryImages; track img) {
+        <img [src]="img" alt="Serviço realizado de serralheria" />
+      }
+    </div>
+
+    <div class="cta">
+      <h3>Precisa de um reparo ou adaptação no seu portão?</h3>
+      <a routerLink="/contato" class="button">Solicite um orçamento</a>
+    </div>
+  </div>
+</section>
