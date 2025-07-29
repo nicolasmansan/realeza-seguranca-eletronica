@@ -1,0 +1,11 @@
+@use '../../../vars.scss' as *;
+
+footer {
+  .copy-line {
+    text-align: center;
+    font-size: 0.8rem;
+    background-color: $dark-bg;
+    color: $primary-text;
+    padding: 2px 0;
+  }
+}
