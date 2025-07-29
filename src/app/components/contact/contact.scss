@@ -1,0 +1,85 @@
+@use '../../../vars.scss' as *;
+
+.contact-container {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  .info {
+    flex: 1;
+    
+    a {
+      color: $secondary-text;
+    }
+
+    .info-line-container {
+      padding: 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .info-line {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        img {
+          max-width: 30px;
+        }
+      }
+    }
+
+    .social-links-container {
+      display: flex;
+      gap: 0.5rem;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        padding: 5px;
+        display: block;
+        background-color: $primary;
+        color: $primary-text;
+        border-radius: 100%;
+
+        &:hover {
+          background-color: $primary-hover;
+        }
+
+        &:active {
+          background-color: $primary-active;
+        }
+
+        img {
+          max-width: 100%;
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+  }
+  .map {
+    flex: 1;
+    border-radius: 5px;
+    overflow: hidden;
+
+    iframe {
+      border: none;
+      height: 300px;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    .info {
+      flex: 1 1 100%;
+    }
+    .map {
+      flex: 1 1 100%;
+    }
+  }
+}
