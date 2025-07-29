@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Service, servicesData } from '../repositories/services';
+import { Service, servicesData } from '../../repositories/services';
 
 @Component({
   selector: 'app-services-cards',

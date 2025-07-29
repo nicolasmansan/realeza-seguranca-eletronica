@@ -3,7 +3,7 @@ import { Banner } from "../../components/banner/banner";
 import { Brands } from "../../components/brands/brands";
 import { Reviews } from "../../components/reviews/reviews";
 import { SolutionsCarousel } from "../../components/solutions-carousel/solutions-carousel";
-import { ServicesCards } from "../../services-cards/services-cards";
+import { ServicesCards } from "../../components/services-cards/services-cards";
 
 @Component({
   selector: 'app-home',
