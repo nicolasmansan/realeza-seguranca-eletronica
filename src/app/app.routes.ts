@@ -1,6 +1,12 @@
 import { Routes } from '@angular/router';
-import { Home } from './pages/home/home';
+import { HomePage } from './pages/home-page/home-page';
+import { IronPage } from './pages/iron-page/iron-page';
+import { SecurityPage } from './pages/security-page/security-page';
+import { GatePage } from './pages/gate-page/gate-page';
 
 export const routes: Routes = [
-  { path: '', component: Home }
+  { path: '', component: HomePage },
+  { path: 'serralheiria', component: IronPage },
+  { path: 'seguranca-eletronica', component: SecurityPage },
+  { path: 'portoes-eletronicos', component: GatePage },
 ];

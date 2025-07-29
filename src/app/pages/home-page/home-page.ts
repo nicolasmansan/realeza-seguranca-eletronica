@@ -8,9 +8,9 @@ import { ServicesCards } from "../../components/services-cards/services-cards";
 @Component({
   selector: 'app-home',
   imports: [Banner, Brands, Reviews, SolutionsCarousel, ServicesCards],
-  templateUrl: './home.html',
-  styleUrl: './home.scss'
+  templateUrl: './home-page.html',
+  styleUrl: './home-page.scss'
 })
-export class Home {
+export class HomePage {
 
 }
