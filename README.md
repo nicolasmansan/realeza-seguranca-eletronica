@@ -4,7 +4,6 @@ TODO:
 Componentes na pagina inicial
     Sobre nos
     Contato + Mapa
-    Serviços => Imititar leayout com 3 pilares
     Planos
     Redes Sociais => Carrossel do instagram?
 
@@ -17,6 +16,8 @@ Página de contato => Renderizar componente de contato + Mapa
 Mais botões de ação com link para whatsapp
 
 Botão de whatsapp
+
+destacar aplicativos disponibilizados
 
 Colocar sub páginas abaixo dos serviços no menu
 

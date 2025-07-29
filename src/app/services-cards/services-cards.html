@@ -1,0 +1,21 @@
+<section class="services-section">
+  <div class="container">
+    <h3 class="section-title">Nossos Serviços</h3>
+
+    <div class="cards">
+      @for (service of services; track service.title) {
+        <div class="card">
+          
+          <div class="image" [style]="getBackgroundImage(service.image)"></div>
+          <div class="content" [class.highlight]="service.highlight">
+            <h4>{{ service.title }}</h4>
+            <p>
+              {{ service.description }}
+            </p>
+            <a class="button" [href]="service.link">Saiba mais</a>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

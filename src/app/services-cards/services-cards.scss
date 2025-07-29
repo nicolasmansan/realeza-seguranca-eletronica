@@ -1,0 +1,112 @@
+@use '../../vars.scss' as *;
+
+.services-section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  background-color: $simple-bg;
+
+  .cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .card {
+    border-radius: 10px;
+    flex: 1;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    overflow: hidden;
+      
+    .image {
+      height: 180px;
+      overflow: hidden;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+
+    .content {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+
+      h4 {
+        font-family: 'Raleway', sans-serif;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        color: #222;
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: $secondary-text;
+        margin-bottom: 1.5rem;
+      }
+
+      .button {
+        background: #333;
+        color: #fff;
+        padding: 0.5rem 1.2rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s;
+
+        &:hover {
+          background: #111;
+        }
+      }
+
+      &.highlight {
+        background: $primary;
+        color: $primary-text;
+
+        .icon {
+          color: $primary-text;
+        }
+
+        h4, p {
+          color: $primary-text;
+        }
+
+        .button {
+          background: $primary-text;
+          color: $primary;
+
+          &:hover {
+            background: #e0e0e0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .services-section .card {
+    flex: 1 1 calc(50% - 1rem);
+  }
+
+  .services-section .card:nth-child(2) {
+    flex: 1 1 100%;
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section .card {
+    flex: 1 1 100%;
+  }
+
+  .services-section .card:nth-child(2) {
+    order: -1;
+  }
+}
