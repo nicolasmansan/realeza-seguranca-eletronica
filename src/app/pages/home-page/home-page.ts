@@ -6,10 +6,11 @@ import { SolutionsCarousel } from "../../components/solutions-carousel/solutions
 import { ServicesCards } from "../../components/services-cards/services-cards";
 import { Contact } from "../../components/contact/contact";
 import { InstragramFeed } from "../../components/instragram-feed/instragram-feed";
+import { About } from "../../components/about/about";
 
 @Component({
   selector: 'app-home',
-  imports: [Banner, Brands, Reviews, SolutionsCarousel, ServicesCards, Contact, InstragramFeed],
+  imports: [Banner, Brands, Reviews, SolutionsCarousel, ServicesCards, Contact, InstragramFeed, About],
   templateUrl: './home-page.html',
   styleUrl: './home-page.scss'
 })
