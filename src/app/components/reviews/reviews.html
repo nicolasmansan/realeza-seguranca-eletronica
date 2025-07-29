@@ -4,7 +4,13 @@
   </div>
 
   <div class="carousel-container container">
-    <img class="nav left" (click)="scroll('left')" src="/icons/circle-chevron-left.svg" alt="Anterior">
+    <img
+      class="nav left"
+      loading="lazy"
+      src="/icons/circle-chevron-left.svg"
+      alt="Anterior"
+      (click)="scroll('left')"
+    >
     
     <div class="carousel" #carousel>
       @for (review of reviews; track review) {
@@ -19,6 +25,12 @@
         </div>
       }
     </div>
-    <img class="nav right" (click)="scroll('right')" src="/icons/circle-chevron-right.svg" alt="Próximo">
+    <img
+      class="nav right"
+      loading="lazy"
+      src="/icons/circle-chevron-right.svg"
+      alt="Próximo"
+      (click)="scroll('right')"
+    >
   </div>
 </div>

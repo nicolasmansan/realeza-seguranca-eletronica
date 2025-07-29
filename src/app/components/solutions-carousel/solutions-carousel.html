@@ -5,21 +5,35 @@
   </p>
 
   <div class="carousel-wrapper">
-    <img class="nav left" (click)="scroll('left')" src="/icons/circle-chevron-left.svg" alt="Anterior">
+    <img
+      class="nav left"
+      loading="lazy"
+      src="/icons/circle-chevron-left.svg"
+      alt="Anterior"
+      (click)="scroll('left')"
+    >
 
     <div class="carousel" #carousel>
       @for (solution of solutions; track solution.title) {
         <div class="carousel-item">
-          <div class="bg" [style.backgroundImage]="'url(' + solution.image + ')'"></div>
+          <div class="bg">
+            <img loading="lazy" [src]="solution.image" [alt]="solution.title">
+          </div>
           <div class="overlay">
             <h4>{{ solution.title }}</h4>
-            <img src="/icons/chevron-down.svg" class="arrow-down" />
+            <img src="/icons/chevron-down.svg" class="arrow-down" loading="lazy" />
             <p>{{ solution.description }}</p>
           </div>
         </div>
       }
     </div>
 
-    <img class="nav right" (click)="scroll('right')" src="/icons/circle-chevron-right.svg" alt="Próximo">
+    <img
+      class="nav right"
+      loading="lazy"
+      src="/icons/circle-chevron-right.svg"
+      alt="Próximo"
+      (click)="scroll('right')"
+    >
   </div>
 </div>

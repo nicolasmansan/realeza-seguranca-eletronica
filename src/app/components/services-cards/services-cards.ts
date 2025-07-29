@@ -13,10 +13,4 @@ export class ServicesCards {
   constructor () {
     this.services = servicesData;
   }
-
-  getBackgroundImage(image: string): { [klass: string]: any } {
-    return {
-      'background-image': `url(${image})`
-    };
-  }
 }
