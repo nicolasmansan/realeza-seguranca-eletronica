@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Gallery } from "../../components/gallery/gallery";
 
 @Component({
   selector: 'app-gate-page',
-  imports: [],
+  imports: [Gallery],
   templateUrl: './gate-page.html',
   styleUrl: './gate-page.scss'
 })
@@ -16,8 +17,14 @@ export class GatePage {
   ];
 
   galleryImages = [
-    'assets/portoes-automaticos/portao1.jpg',
-    'assets/portoes-automaticos/portao2.jpg',
-    'assets/portoes-automaticos/portao3.jpg'
+    { src: '/images/portao/cancela-andamento.webp', title: 'Instalação de Cancela', description: 'Cancela automática em processo de instalação' },
+    { src: '/images/portao/cancela-andamento2.webp', title: 'Instalação de Cancela 2', description: 'Etapas da montagem de cancela de acesso' },
+    { src: '/images/portao/cancela-ligada.webp', title: 'Cancela Ativada', description: 'Cancela eletrônica funcionando após instalação' },
+    { src: '/images/portao/portao-motor.webp', title: 'Portão com Motor Automatizado', description: 'Portão com sistema de motor instalado' },
+    { src: '/images/portao/portao-motor-2.webp', title: 'Portão Automatizado 2', description: 'Detalhe do motor em portão automático' },
+    { src: '/images/portao/portao-motor-3.webp', title: 'Portão Automatizado 3', description: 'Vista lateral de portão com automação' },
+    { src: '/images/portao/portao-motor-simples.webp', title: 'Portão com Motor Simples', description: 'Portão automatizado com motor de modelo simples' },
+    { src: '/images/portao/portao-motor.webp', title: 'Portão Automatizado', description: 'Sistema de motor instalado em portão de acesso' },
+    { src: '/images/portao/portao-simples.webp', title: 'Portão Simples', description: 'Portão de estrutura simples' }
   ];
 }
