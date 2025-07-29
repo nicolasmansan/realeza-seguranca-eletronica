@@ -4,7 +4,6 @@ TODO:
 Componentes na pagina inicial
     Sobre nos
     Planos
-    Redes Sociais => Carrossel do instagram?
 
 Nossa historia => TimeLine com fotos e anos intercalados
 
@@ -18,11 +17,11 @@ destacar aplicativos disponibilizados
 
 Colocar sub páginas abaixo dos serviços no menu
 
+Adicionar mais animaçcões
+
 Concorrentes
 https://mastersysfer.com.br/
 https://www.moverautomatizacao.com.br/
-
-
 
 Verificar situação do site
 https://registro.br/tecnologia/ferramentas/whois?search=rparealeza.com.br
