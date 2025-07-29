@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Subtitle } from "../subtitle/subtitle";
 
 interface Brand {
   name: string;
@@ -7,7 +8,7 @@ interface Brand {
 
 @Component({
   selector: 'app-brands',
-  imports: [],
+  imports: [Subtitle],
   templateUrl: './brands.html',
   styleUrl: './brands.scss'
 })

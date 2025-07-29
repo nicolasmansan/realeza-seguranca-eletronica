@@ -1,6 +1,5 @@
-<section class="brands-section container">
-  <h3 class="home-subtitle">Marcas que trabalhamos</h3>
-  <hr>
+<section class="brands-section container content-section">
+  <app-subtitle text="Marcas que trabalhamos" [showLine]="true" />
   <div class="carousel-wrapper">
     <div class="carousel-track">
       @for (item of brands; track item.name) {

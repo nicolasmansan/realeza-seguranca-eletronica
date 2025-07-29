@@ -1,19 +1,7 @@
 @use '../../../vars.scss' as *;
 
 .brands-section {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
   text-align: center;
-
-  hr {
-    width: 500px;
-    max-width: 100%;
-    margin: 0.5rem 0;
-    height: 2px;
-    background-color: $primary-text;
-    border: none;
-    margin: 1rem auto 2rem;
-  }
 
   .carousel-wrapper {
     overflow: hidden;

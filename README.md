@@ -9,8 +9,6 @@ Nossa historia => TimeLine com fotos e anos intercalados
 
 Páginas de serviços => Dar o tapa no visual
 
-Destacar em mais alguns textos que é para residencias e condominios 
-
 Mais botões de ação com link para whatsapp
 
 destacar aplicativos disponibilizados
@@ -26,3 +24,7 @@ https://www.moverautomatizacao.com.br/
 Verificar situação do site
 https://registro.br/tecnologia/ferramentas/whois?search=rparealeza.com.br
 
+
+Qualidade
+
+## Definir componente para subtitulos

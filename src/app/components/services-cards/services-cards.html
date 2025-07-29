@@ -1,6 +1,6 @@
-<section class="services-section" id="servicos">
+<section class="services-section content-section" id="servicos">
   <div class="container">
-    <h3 class="section-title">Nossos Serviços</h3>
+    <app-subtitle text="Nossos Serviços" [showLine]="true" />
 
     <div class="cards">
       @for (service of services; track service.title) {

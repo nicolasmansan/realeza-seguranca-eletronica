@@ -1,0 +1,17 @@
+@use '../../../vars.scss' as *;
+
+h2.subtitle {
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: $primary;
+}
+
+hr {
+  width: 500px;
+  max-width: 100%;
+  height: 2px;
+  background-color: $primary-text;
+  border: none;
+  margin: -1rem auto 1rem;
+}

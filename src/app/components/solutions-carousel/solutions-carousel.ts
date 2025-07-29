@@ -1,10 +1,11 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Solution, solutionsData } from '../../repositories/solutions';
+import { Subtitle } from "../subtitle/subtitle";
 
 
 @Component({
   selector: 'app-solutions-carousel',
-  imports: [],
+  imports: [Subtitle],
   templateUrl: './solutions-carousel.html',
   styleUrl: './solutions-carousel.scss'
 })

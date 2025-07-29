@@ -1,9 +1,10 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { Review, reviewsData } from '../../repositories/reviews';
+import { Subtitle } from "../subtitle/subtitle";
 
 @Component({
   selector: 'app-reviews',
-  imports: [],
+  imports: [Subtitle],
   templateUrl: './reviews.html',
   styleUrl: './reviews.scss'
 })
