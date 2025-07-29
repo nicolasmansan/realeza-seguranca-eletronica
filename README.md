@@ -14,8 +14,6 @@ Destacar em mais alguns textos que é para residencias e condominios
 
 Mais botões de ação com link para whatsapp
 
-Botão de whatsapp
-
 destacar aplicativos disponibilizados
 
 Colocar sub páginas abaixo dos serviços no menu
