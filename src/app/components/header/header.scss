@@ -35,22 +35,51 @@
   
   nav.menu {
     ul {
+      z-index: 15;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 2rem;
       list-style: none;
 
-      li a {
-        font-weight: 600;
-        padding: 0.25rem 0;
-        color: #000;
-        transition: 50ms;
+      li {
+        position: relative;
+        z-index: 15;
 
-        &:hover {
-          color: $primary;
-          border-top: 3px solid $primary;
-          border-bottom: 3px solid $primary;
+        &:nth-child(1) {
+          z-index: 100;
+        }
+        
+        &:nth-child(2):hover .submenu {
+          display: flex;
+        }
+
+        a {
+          font-weight: 600;
+          padding: 0.25rem 0;
+          color: #000;
+          transition: 50ms;
+
+          &:hover {
+            color: $primary;
+            border-top: 3px solid $primary;
+            border-bottom: 3px solid $primary;
+          }
+        }
+
+        .submenu {
+          display: none;
+          transition: 100ms;
+          position: absolute;
+          top: 28px;
+          left: -90px;
+          width: 250px;
+          padding: 1rem;
+          border-radius: 8px;
+          flex-direction: column;
+          justify-content: space-around;
+          z-index: 15;
+          background-color: #fff;
         }
       }
     }
@@ -80,9 +109,19 @@
 
       li {
         padding: 1rem;
+        text-align: center;
         a {
           color: $primary-text;
           font-weight: 600;
+        }
+
+        .submenu {
+          gap: 1rem;
+          padding-top: 1rem;
+          
+          li {
+            padding: 0;
+          }
         }
       }
     }

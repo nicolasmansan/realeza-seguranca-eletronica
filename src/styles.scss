@@ -52,6 +52,7 @@ h1, h2, h3, h4, h5, h6 {
 
 button, .btn-primary {
   padding: 1rem;
+  display: inline-block;
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   font-weight: 700;
@@ -144,3 +145,21 @@ button, .btn-primary {
     transform: translateX(0);
   }
 }
+
+.fade-in-down {
+  opacity: 0;
+  transform: translatY(-20px);
+  animation: fadeInDown 0.2s ease-out forwards;
+}
+
+.fade-in-down.delay-1 {
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

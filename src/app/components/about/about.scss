@@ -178,8 +178,8 @@
         gap: 0.5rem;
 
         img {
-          width: 30px;
-          height: 30px;
+          width: 40px;
+          height: 40px;
           filter: invert(55%) sepia(91%) saturate(1086%) hue-rotate(93deg) brightness(95%) contrast(93%);
         }
 
@@ -190,6 +190,9 @@
         }
       }
     }
+  }
+  .btn-primary {
+    margin-top: 1.5rem;
   }
 }
 
