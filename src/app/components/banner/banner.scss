@@ -8,6 +8,10 @@
   height: 650px;
   position: relative;
 
+  @media (max-width: 768px) {
+    background-attachment: scroll;
+  }
+
   .black-filter {
     position: absolute;
     left: 0;

@@ -20,6 +20,8 @@ export class ServicesCards implements AfterViewInit {
   ngAfterViewInit(): void {
     const section = this.el.nativeElement as HTMLElement;
 
+    const hasWindow = typeof window !== 'undefined';
+
     gsap.from(section.querySelector('.from-left'), {
       x: -200,
       opacity: 0,
@@ -46,7 +48,7 @@ export class ServicesCards implements AfterViewInit {
     });
 
     gsap.from(section.querySelector('.from-right'), {
-      x: 200,
+      x: hasWindow && window?.innerWidth >= 998 ? 200 : -200,
       opacity: 0,
       scrollTrigger: {
         trigger: section.querySelector('.from-right'),
