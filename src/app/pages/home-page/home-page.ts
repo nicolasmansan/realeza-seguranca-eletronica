@@ -8,10 +8,22 @@ import { Contact } from "../../components/contact/contact";
 import { InstragramFeed } from "../../components/instragram-feed/instragram-feed";
 import { About } from "../../components/about/about";
 import { PlansApps } from "../../components/plans-apps/plans-apps";
+import { Transition } from "../../components/transition/transition";
 
 @Component({
   selector: 'app-home',
-  imports: [Banner, Brands, Reviews, SolutionsCarousel, ServicesCards, Contact, InstragramFeed, About, PlansApps],
+  imports: [
+    Banner,
+    Brands,
+    Reviews,
+    SolutionsCarousel,
+    ServicesCards,
+    Contact,
+    InstragramFeed,
+    About,
+    PlansApps,
+    Transition
+  ],
   templateUrl: './home-page.html',
   styleUrl: './home-page.scss'
 })
