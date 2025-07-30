@@ -3,17 +3,19 @@
     <app-subtitle text="Nossos Serviços" [showLine]="true" />
 
     <div class="cards">
-      @for (service of services; track service.title) {
-        <div class="card">
-          
+      @for (service of services; let i = $index; track service.title) {
+        <div class="card"
+            [class]="{
+              'from-left': i === 0,
+              'from-bottom': i === 1,
+              'from-right': i === 2
+            }">
           <div class="image">
             <img loading="lazy" [src]="service.image" [alt]="service.title">
           </div>
           <div class="content" [class.highlight]="service.highlight">
             <h4>{{ service.title }}</h4>
-            <p>
-              {{ service.description }}
-            </p>
+            <p>{{ service.description }}</p>
             <a class="button" [href]="service.link">Saiba mais</a>
           </div>
         </div>

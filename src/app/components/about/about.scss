@@ -77,6 +77,10 @@
           font-size: 1.8rem;
           color: #59c21d;
           display: block;
+
+          &:before {
+            content: '+';
+          }
         }
 
         span {
