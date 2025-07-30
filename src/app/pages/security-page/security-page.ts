@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Gallery } from "../../components/gallery/gallery";
+import { Subtitle } from "../../components/subtitle/subtitle";
 
 @Component({
   selector: 'app-security-page',
-  imports: [Gallery],
+  imports: [Gallery, Subtitle],
   templateUrl: './security-page.html',
   styleUrl: './security-page.scss'
 })
@@ -19,7 +20,7 @@ export class SecurityPage {
   differentials = [
     'Atendimento rápido e técnico especializado',
     'Produtos com garantia e alta durabilidade',
-    'Suporte pós-instalação com manutenção programada',
+    'Suporte pós-instalação',
     'Soluções personalizadas para residências, condomínios e empresas'
   ];
 

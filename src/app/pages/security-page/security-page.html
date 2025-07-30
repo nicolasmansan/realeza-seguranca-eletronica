@@ -1,34 +1,34 @@
-<section class="seguranca-page">
+<section class="seguranca-page container">
   <div class="header">
     <h1>Segurança Eletrônica</h1>
-    <img src="assets/seguranca-eletronica/banner.jpg" alt="Imagem de sistema de segurança em operação" />
+    <img src="/images/servico-seguranca-eletronica.webp" alt="Sistema de segurança de uma casa" />
   </div>
 
   <div class="content">
     <p class="intro">
       Proteja o que é importante com soluções completas de segurança eletrônica. Oferecemos instalação e manutenção de sistemas modernos, eficientes e personalizados para sua necessidade.
     </p>
-
-    <h2>Soluções que oferecemos:</h2>
+ 
+    <app-subtitle text="Soluções que oferecemos" [showLine]="true" [center]="true" />
     <ul class="services-list">
       @for (item of services; track item) {
-        <li><i class="fas fa-check-circle"></i> {{ item }}</li>
+        <li><img src="/icons/check-solid.svg"> {{ item }}</li>
       }
     </ul>
 
-    <h2>Galeria de serviços realizados:</h2>
-    <app-gallery [images]="galleryImages"></app-gallery>
-
-    <h2>Nossos diferenciais:</h2>
+    <app-subtitle text="Nossos diferenciais" [showLine]="true" [center]="true" />
     <ul class="differentials-list">
       @for (diff of differentials; track diff) {
-        <li><i class="fas fa-star"></i> {{ diff }}</li>
+        <li><img src="/icons/check-solid.svg"> {{ diff }}</li>
       }
     </ul>
+
+    <app-subtitle text="Galeria de serviços realizados" [showLine]="true" [center]="true" />
+    <app-gallery [images]="galleryImages"></app-gallery>
 
     <div class="cta">
       <h3>Quer proteger sua casa, empresa ou condomínio?</h3>
-      <a routerLink="/contato" class="button">Solicite um orçamento</a>
+      <a class="btn-primary" target="_blank" href="https://api.whatsapp.com/send/?phone=555130120735&text=Ol%C3%A1+Realeza%21+%2AVim+do+site%2A+e+gostaria+de+ajuda%21&type=phone_number&app_absent=0">Solicitar atendimento</a>
     </div>
   </div>
 </section>
