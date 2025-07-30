@@ -19,7 +19,6 @@ export class GatePage {
 
   galleryImages = [
     { src: '/images/portao/cancela-andamento.webp', title: 'Instalação de Cancela', description: 'Cancela automática em processo de instalação' },
-    { src: '/images/portao/cancela-andamento2.webp', title: 'Instalação de Cancela 2', description: 'Etapas da montagem de cancela de acesso' },
     { src: '/images/portao/cancela-ligada.webp', title: 'Cancela Ativada', description: 'Cancela eletrônica funcionando após instalação' },
     { src: '/images/portao/portao-motor.webp', title: 'Portão com Motor Automatizado', description: 'Portão com sistema de motor instalado' },
     { src: '/images/portao/portao-motor-2.webp', title: 'Portão Automatizado 2', description: 'Detalhe do motor em portão automático' },

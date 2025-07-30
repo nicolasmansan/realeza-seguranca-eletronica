@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Gallery } from "../../components/gallery/gallery";
+import { Subtitle } from "../../components/subtitle/subtitle";
 
 @Component({
   selector: 'app-iron-page',
-  imports: [Gallery],
+  imports: [Gallery, Subtitle],
   templateUrl: './iron-page.html',
   styleUrl: './iron-page.scss'
 })
