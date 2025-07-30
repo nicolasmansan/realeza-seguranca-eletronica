@@ -9,4 +9,5 @@ import { Component, Input } from '@angular/core';
 export class Subtitle {
   @Input() text: string = '';
   @Input() showLine: boolean = false;
+  @Input() center: boolean = false;
 }

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Gallery } from "../../components/gallery/gallery";
+import { Subtitle } from "../../components/subtitle/subtitle";
 
 @Component({
   selector: 'app-gate-page',
-  imports: [Gallery],
+  imports: [Gallery, Subtitle],
   templateUrl: './gate-page.html',
   styleUrl: './gate-page.scss'
 })
