@@ -140,10 +140,15 @@
       max-width: 400px;
     }
 
-    h5 {
+    .pre-title {
       font-size: 0.9rem;
+      font-weight: 600;
       color: $secondary-text;
       text-transform: uppercase;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.2;
+      margin: 0;
+      padding: 0;
     }
 
     h2 {
