@@ -13,10 +13,10 @@ export const reviewsData: Review[] = [
     text: 'Excelente atendimento tanto na venda quanto no pós venda, o serviço ficou perfeito, pontualidade, agilidade, comprometimento com o cliente e qualidade. Super recomendo. Muito obrigada, estou super satisfeita.'
   },
   {
-    name: 'Gilberto Silva',
+    name: 'Patrícia Zanella',
     condo: 'Anônimo',
-    date: '22/05/2025',
-    text: 'A instalação teve um pequeno problema mas a empresa logo se prontificou a resolver. Boa comunicação e bom atendimento.'
+    date: '24/07/2025',
+    text: 'Serviço deles muito bom! Sou síndica de um Condomínio e super indico!'
   },
   {
     name: 'Luiza Helena Gama dos Reis',
