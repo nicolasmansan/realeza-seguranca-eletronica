@@ -11,9 +11,14 @@ export const solutionsData: Solution[] = [
     image: '/images/porta-automatica.webp',
   },
   {
-    title: 'Porteiro eletrônico e Interfones',
+    title: 'Porteiro Eletrônico e Interfones',
     description: 'Sistema de interfonia com câmera instalada para visualizar quem está tocando o interfone e instalação de interfones em residências e prédios.',
     image: '/images/interfone.webp',
+  },
+  {
+    title: 'Portaria Autônoma',
+    description: 'Sistema de interfonia com câmera integrada que permite aos próprios moradores gerenciar o acesso pelo aplicativo, sem necessidade de porteiro presencial.',
+    image: '/images/monitoramento-portaria-a.webp',
   },
   {
     title: 'Portões Automatizados',
