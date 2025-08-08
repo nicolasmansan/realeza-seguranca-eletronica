@@ -20,6 +20,6 @@ export class Brands {
     { name: 'Multilaser', url: '/images/multilaser.svg' },
     { name: 'TP-Link', url: '/images/tplink.svg' },
     { name: 'HDL', url: '/images/hdl.png' },
-    { name: 'Dahua', url: '/images/dahua.png' },
+    { name: 'AGL', url: '/images/agl.webp' },
   ];
 }
