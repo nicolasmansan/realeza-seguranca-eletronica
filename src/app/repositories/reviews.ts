@@ -13,7 +13,7 @@ export const reviewsData: Review[] = [
     text: 'Excelente atendimento tanto na venda quanto no pós venda, o serviço ficou perfeito, pontualidade, agilidade, comprometimento com o cliente e qualidade. Super recomendo. Muito obrigada, estou super satisfeita.'
   },
   {
-    name: 'Patrícia Zanella',
+    name: 'Patricia Zanella',
     condo: 'Anônimo',
     date: '24/07/2025',
     text: 'Serviço deles muito bom! Sou síndica de um Condomínio e super indico!'
