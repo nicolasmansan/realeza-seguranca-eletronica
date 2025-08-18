@@ -18,9 +18,8 @@ export class IronPage {
   ];
 
   galleryImages = [
-    { src: '/images/serralheria/serra1.webp', title: 'Reparo em serralheria', description: 'Reparo em portão danificado' },
+    { src: '/images/serralheria/serra4.webp', title: 'Reparo em serralheria', description: 'Reparo em portão danificado' },
     { src: '/images/serralheria/serra2.webp', title: 'Reparo em serralheria', description: 'Reparo em portão danificado' },
-    { src: '/images/serralheria/serra3.webp', title: 'Reparo em serralheria', description: 'Reparo em portão danificado' },
-    { src: '/images/serralheria/serra4.webp', title: 'Reparo em serralheria', description: 'Reparo em portão danificado' }
+    { src: '/images/marca/capa.webp', title: 'Reparo', description: 'Reparo em portão eletrônico' }
   ];
 }
