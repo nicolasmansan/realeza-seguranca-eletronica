@@ -21,5 +21,7 @@ export class Brands {
     { name: 'TP-Link', url: '/images/tplink.svg' },
     { name: 'HDL', url: '/images/hdl.png' },
     { name: 'AGL', url: '/images/agl.webp' },
+    { name: 'SPA', url: '/images/spa.webp' },
+    { name: 'PPA', url: '/images/ppa.webp' },
   ];
 }

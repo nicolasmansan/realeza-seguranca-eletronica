@@ -75,13 +75,18 @@
           flex: 1;
         }
 
-        strong {
-          font-size: 1.8rem;
-          color: #59c21d;
-          display: block;
+        .number {
+          strong {
+            font-family: 'Poppins', sans-serif;
+            display: inline-block !important;
+            font-weight: 500;
+            font-size: 1.8rem;
+            color: #59c21d;
+            display: block;
 
-          &:before {
-            content: '+';
+            &:nth-child(1)::before {
+              content: '+';
+            }
           }
         }
 

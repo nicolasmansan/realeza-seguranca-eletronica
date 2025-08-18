@@ -40,7 +40,7 @@ export class About implements AfterViewInit {
       });
 
       gsap.to(this.clientNumber.nativeElement, {
-        innerText: 1000,
+        innerText: 90,
         duration: 2.5,
         ease: 'power1.out',
         snap: { innerText: 1 },
@@ -52,7 +52,7 @@ export class About implements AfterViewInit {
       });
 
       gsap.to(this.gatesNumber.nativeElement, {
-        innerText: 5000,
+        innerText: 70,
         duration: 3,
         ease: 'power1.out',
         snap: { innerText: 1 },
@@ -65,7 +65,7 @@ export class About implements AfterViewInit {
       });
 
       gsap.to(this.camerasNumber.nativeElement, {
-        innerText: 10000,
+        innerText: 80,
         duration: 3.5,
         ease: 'power1.out',
         snap: { innerText: 1 },
