@@ -1,0 +1,36 @@
+.hero { padding: 64px 0; display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: center; }
+    .hero h1 { font-size: clamp(28px, 4vw, 44px); line-height: 1.1; margin: 0 0 16px; }
+    .hero p { font-size: 18px; color: var(--muted); margin: 0 0 24px; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(90deg, rgba(45,212,191,.15), rgba(14,165,160,.15)); border: 1px solid rgba(45,212,191,.35); padding: 8px 12px; border-radius: 999px; font-size: 14px; color: #bff3ea; }
+
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 18px; border-radius: 12px; font-weight: 600; border: 1px solid transparent; }
+    .btn-primary { background: var(--accent); color: #0b1020; }
+    .btn-primary:hover { background: var(--accent-dark); }
+    .btn-ghost { background: transparent; color: var(--text); border-color: #2b345f; }
+    .btn-ghost:hover { border-color: var(--accent); }
+
+    .grid { display: grid; gap: 20px; }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } .grid-3 { grid-template-columns: 1fr; } .grid-2 { grid-template-columns: 1fr; } }
+
+    .card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0)); border: 1px solid #1c2752; border-radius: 18px; padding: 22px; }
+    .card h3 { margin: 0 0 8px; font-size: 20px; }
+    .muted { color: var(--muted); }
+
+    section { padding: 40px 0; }
+    section h2 { font-size: 28px; margin: 0 0 16px; }
+    .list { display: grid; gap: 10px; }
+    .list li { list-style: none; display: flex; align-items: flex-start; gap: 10px; }
+    .dot { width: 10px; height: 10px; background: var(--accent); border-radius: 999px; margin-top: 8px; flex-shrink: 0; }
+
+    .banner { background: linear-gradient(90deg, rgba(45,212,191,.12), rgba(14,165,160,.06)); border: 1px dashed rgba(45,212,191,.5); padding: 20px; border-radius: 16px; }
+    .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .kpi { text-align: center; background: #0e1533; border: 1px solid #1c2752; border-radius: 16px; padding: 16px; }
+    .kpi .v { font-size: 28px; font-weight: 700; }
+
+    footer { padding: 40px 0; color: var(--muted); border-top: 1px solid #1c2752; margin-top: 20px; }
+    .small { font-size: 14px; color: var(--muted); }
+    .faq dt { font-weight: 700; margin-top: 12px; }
+    .faq dd { margin: 6px 0 0 0; color: var(--muted); }
