@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Gallery } from "../../components/gallery/gallery";
 import { Subtitle } from "../../components/subtitle/subtitle";
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-iron-page',
@@ -8,7 +9,7 @@ import { Subtitle } from "../../components/subtitle/subtitle";
   templateUrl: './iron-page.html',
   styleUrl: './iron-page.scss'
 })
-export class IronPage {
+export class IronPage implements OnInit {
   services = [
     'Reparos em portões metálicos existentes',
     'Soldas e reforços estruturais',
@@ -22,4 +23,11 @@ export class IronPage {
     { src: '/images/serralheria/serra2.webp', title: 'Reparo em serralheria', description: 'Reparo em portão danificado' },
     { src: '/images/marca/capa.webp', title: 'Reparo', description: 'Reparo em portão eletrônico' }
   ];
+
+  constructor(private titleService: Title, private metaService: Meta) {}
+
+  ngOnInit() {
+    this.titleService.setTitle('Serralheria | Realeza Segurança Eletrônica');
+    this.metaService.updateTag({ name: 'description', content: 'Saiba mais sobre nossas soluções em serralheria.' });
+  }
 }

@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Gallery } from "../../components/gallery/gallery";
 import { Subtitle } from "../../components/subtitle/subtitle";
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-security-page',
@@ -8,7 +9,7 @@ import { Subtitle } from "../../components/subtitle/subtitle";
   templateUrl: './security-page.html',
   styleUrl: './security-page.scss'
 })
-export class SecurityPage {
+export class SecurityPage implements OnInit {
   services = [
     'Instalação e manutenção de câmeras de segurança (CFTV)',
     'Controle de acesso com senha, biometria ou cartão',
@@ -51,4 +52,11 @@ export class SecurityPage {
     { src: '/images/seguranca/servidor1.webp', title: 'Servidor de Segurança 1', description: 'Rack com equipamentos de rede e segurança' },
     { src: '/images/seguranca/servidor2.webp', title: 'Servidor de Segurança 2', description: 'Infraestrutura de TI para sistemas de vigilância' }
   ];
+
+  constructor(private titleService: Title, private metaService: Meta) {}
+
+  ngOnInit() {
+    this.titleService.setTitle('Segurança Eletrônica | Realeza Segurança Eletrônica');
+    this.metaService.updateTag({ name: 'description', content: 'Saiba mais sobre nossas soluções em segurança eletrônica.' });
+  }
 }

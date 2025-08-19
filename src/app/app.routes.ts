@@ -7,8 +7,36 @@ import { SindicoPage } from './pages/sindico-page/sindico-page';
 
 export const routes: Routes = [
   { path: '', component: HomePage },
-  { path: 'serralheria', component: IronPage },
-  { path: 'seguranca-eletronica', component: SecurityPage },
-  { path: 'portoes-automaticos', component: GatePage },
-  { path: 'sindicos', component: SindicoPage },
+  {
+    path: 'serralheria',
+    component: IronPage,
+    data: {
+      title: 'Serralheria - Realeza Segurança Eletrônica',
+      description: 'Saiba mais sobre nossas soluções em serralheria.'
+    }
+  },
+  {
+    path: 'seguranca-eletronica',
+    component: SecurityPage,
+    data: {
+      title: 'Segurança Eletrônica - Realeza Segurança Eletrônica',
+      description: 'Saiba mais sobre nossas soluções em segurança eletrônica.'
+    }
+  },
+  {
+    path: 'portoes-automaticos',
+    component: GatePage,
+    data: {
+      title: 'Portões Automáticos - Realeza Segurança Eletrônica',
+      description: 'Saiba mais sobre nossas soluções em portões automáticos.'
+    }
+  },
+  {
+    path: 'sindicos',
+    component: SindicoPage,
+    data: {
+      title: 'Síndicos - Realeza Segurança Eletrônica',
+      description: 'Saiba mais sobre nossas soluções para síndicos.'
+    }
+  },
 ];

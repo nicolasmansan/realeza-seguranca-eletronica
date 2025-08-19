@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Gallery } from "../../components/gallery/gallery";
 import { Subtitle } from "../../components/subtitle/subtitle";
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-gate-page',
@@ -8,7 +9,7 @@ import { Subtitle } from "../../components/subtitle/subtitle";
   templateUrl: './gate-page.html',
   styleUrl: './gate-page.scss'
 })
-export class GatePage {
+export class GatePage implements OnInit {
   services = [
     'Instalação de motores para portões deslizantes (de correr)',
     'Automação de portões basculantes e pivotantes',
@@ -27,4 +28,11 @@ export class GatePage {
     { src: '/images/portao/portao-motor.webp', title: 'Portão Automatizado', description: 'Sistema de motor instalado em portão de acesso' },
     { src: '/images/portao/portao-simples.webp', title: 'Portão Simples', description: 'Portão de estrutura simples' }
   ];
+
+  constructor(private titleService: Title, private metaService: Meta) {}
+
+  ngOnInit() {
+    this.titleService.setTitle('Portões Eletrônicos | Realeza Segurança Eletrônica');
+    this.metaService.updateTag({ name: 'description', content: 'Saiba mais sobre nossas soluções em portões eletrônicos.' });
+  }
 }
