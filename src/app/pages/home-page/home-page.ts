@@ -9,6 +9,7 @@ import { InstragramFeed } from "../../components/instragram-feed/instragram-feed
 import { About } from "../../components/about/about";
 import { PlansApps } from "../../components/plans-apps/plans-apps";
 import { Transition } from "../../components/transition/transition";
+import { Sindicos } from "../../components/sindicos/sindicos";
 
 @Component({
   selector: 'app-home',
@@ -22,7 +23,8 @@ import { Transition } from "../../components/transition/transition";
     InstragramFeed,
     About,
     PlansApps,
-    Transition
+    Transition,
+    Sindicos
   ],
   templateUrl: './home-page.html',
   styleUrl: './home-page.scss'
