@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Gallery } from "../../components/gallery/gallery";
 import { Subtitle } from "../../components/subtitle/subtitle";
 import { Meta, Title } from '@angular/platform-browser';
+import { GtmService } from '../../shared/services/gtm.service';
 
 @Component({
   selector: 'app-gate-page',
@@ -29,10 +30,13 @@ export class GatePage implements OnInit {
     { src: '/images/portao/portao-simples.webp', title: 'Portão Simples', description: 'Portão de estrutura simples' }
   ];
 
-  constructor(private titleService: Title, private metaService: Meta) {}
+  constructor(private titleService: Title, private metaService: Meta, private gtmService: GtmService) {}
 
   ngOnInit() {
     this.titleService.setTitle('Portões Eletrônicos | Realeza Segurança Eletrônica');
     this.metaService.updateTag({ name: 'description', content: 'Saiba mais sobre nossas soluções em portões eletrônicos.' });
+    
+    // Inicializar GTM
+    this.gtmService.init();
   }
 }

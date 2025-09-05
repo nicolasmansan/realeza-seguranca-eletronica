@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Banner } from "../../components/banner/banner";
 import { Brands } from "../../components/brands/brands";
 import { Reviews } from "../../components/reviews/reviews";
@@ -10,6 +10,7 @@ import { About } from "../../components/about/about";
 import { PlansApps } from "../../components/plans-apps/plans-apps";
 import { Transition } from "../../components/transition/transition";
 import { Sindicos } from "../../components/sindicos/sindicos";
+import { GtmService } from '../../shared/services/gtm.service';
 
 @Component({
   selector: 'app-home',
@@ -29,6 +30,12 @@ import { Sindicos } from "../../components/sindicos/sindicos";
   templateUrl: './home-page.html',
   styleUrl: './home-page.scss'
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
+  constructor(private gtmService: GtmService) {}
+
+  ngOnInit() {
+    // Inicializar GTM
+    this.gtmService.init();
+  }
 }

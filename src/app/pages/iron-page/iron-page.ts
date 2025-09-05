@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Gallery } from "../../components/gallery/gallery";
 import { Subtitle } from "../../components/subtitle/subtitle";
 import { Meta, Title } from '@angular/platform-browser';
+import { GtmService } from '../../shared/services/gtm.service';
 
 @Component({
   selector: 'app-iron-page',
@@ -24,10 +25,13 @@ export class IronPage implements OnInit {
     { src: '/images/marca/capa.webp', title: 'Reparo', description: 'Reparo em portão eletrônico' }
   ];
 
-  constructor(private titleService: Title, private metaService: Meta) {}
+  constructor(private titleService: Title, private metaService: Meta, private gtmService: GtmService) {}
 
   ngOnInit() {
     this.titleService.setTitle('Serralheria | Realeza Segurança Eletrônica');
     this.metaService.updateTag({ name: 'description', content: 'Saiba mais sobre nossas soluções em serralheria.' });
+    
+    // Inicializar GTM
+    this.gtmService.init();
   }
 }

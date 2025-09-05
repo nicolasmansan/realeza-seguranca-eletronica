@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
+import { GtmService } from '../../shared/services/gtm.service';
 
 @Component({
   selector: 'app-sindico-page',
@@ -9,10 +10,13 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class SindicoPage implements OnInit {
 
-  constructor(private titleService: Title, private metaService: Meta) {}
+  constructor(private titleService: Title, private metaService: Meta, private gtmService: GtmService) {}
 
   ngOnInit() {
     this.titleService.setTitle('Síndicos | Realeza Segurança Eletrônica');
     this.metaService.updateTag({ name: 'description', content: 'Saiba mais sobre nossas soluções para síndicos.' });
+    
+    // Inicializar GTM
+    this.gtmService.init();
   }
 }
