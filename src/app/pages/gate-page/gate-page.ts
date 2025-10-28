@@ -3,10 +3,11 @@ import { Gallery } from "../../components/gallery/gallery";
 import { Subtitle } from "../../components/subtitle/subtitle";
 import { Meta, Title } from '@angular/platform-browser';
 import { GtmService } from '../../shared/services/gtm.service';
+import { ConversionButton } from '../../components/conversion-button/conversion-button';
 
 @Component({
   selector: 'app-gate-page',
-  imports: [Gallery, Subtitle],
+  imports: [Gallery, Subtitle, ConversionButton],
   templateUrl: './gate-page.html',
   styleUrl: './gate-page.scss'
 })
@@ -37,6 +38,6 @@ export class GatePage implements OnInit {
     this.metaService.updateTag({ name: 'description', content: 'Saiba mais sobre nossas soluções em portões eletrônicos.' });
     
     // Inicializar GTM
-    this.gtmService.init();
+    // this.gtmService.init();
   }
 }

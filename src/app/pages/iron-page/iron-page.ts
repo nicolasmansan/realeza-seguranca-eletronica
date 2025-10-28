@@ -3,10 +3,11 @@ import { Gallery } from "../../components/gallery/gallery";
 import { Subtitle } from "../../components/subtitle/subtitle";
 import { Meta, Title } from '@angular/platform-browser';
 import { GtmService } from '../../shared/services/gtm.service';
+import { ConversionButton } from '../../components/conversion-button/conversion-button';
 
 @Component({
   selector: 'app-iron-page',
-  imports: [Gallery, Subtitle],
+  imports: [Gallery, Subtitle, ConversionButton],
   templateUrl: './iron-page.html',
   styleUrl: './iron-page.scss'
 })
@@ -32,6 +33,6 @@ export class IronPage implements OnInit {
     this.metaService.updateTag({ name: 'description', content: 'Saiba mais sobre nossas soluções em serralheria.' });
     
     // Inicializar GTM
-    this.gtmService.init();
+    // this.gtmService.init();
   }
 }

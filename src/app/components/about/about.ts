@@ -3,12 +3,13 @@ import { Subtitle } from "../subtitle/subtitle";
 
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { ConversionButton } from '../conversion-button/conversion-button';
 
 gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-about',
-  imports: [Subtitle],
+  imports: [Subtitle, ConversionButton],
   templateUrl: './about.html',
   styleUrl: './about.scss'
 })

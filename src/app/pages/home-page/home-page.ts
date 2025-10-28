@@ -36,6 +36,6 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     // Inicializar GTM
-    this.gtmService.init();
+    // this.gtmService.init();
   }
 }

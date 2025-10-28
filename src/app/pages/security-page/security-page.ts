@@ -3,10 +3,11 @@ import { Gallery } from "../../components/gallery/gallery";
 import { Subtitle } from "../../components/subtitle/subtitle";
 import { Meta, Title } from '@angular/platform-browser';
 import { GtmService } from '../../shared/services/gtm.service';
+import { ConversionButton } from '../../components/conversion-button/conversion-button';
 
 @Component({
   selector: 'app-security-page',
-  imports: [Gallery, Subtitle],
+  imports: [Gallery, Subtitle, ConversionButton],
   templateUrl: './security-page.html',
   styleUrl: './security-page.scss'
 })
@@ -61,6 +62,6 @@ export class SecurityPage implements OnInit {
     this.metaService.updateTag({ name: 'description', content: 'Saiba mais sobre nossas soluções em segurança eletrônica.' });
     
     // Inicializar GTM
-    this.gtmService.init();
+    // this.gtmService.init();
   }
 }
